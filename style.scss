@@ -1,0 +1,113 @@
+@import 'variables/colores.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    height: 300px;
+    background: $background_fondo_caja_padre;
+    padding: 10px;
+}
+.child{
+    width: 100px;
+    height: 100px;
+    background: rgb(240, 236, 40);
+    border-radius: 100px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: parpadeo;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.nube{
+    position: relative;
+    left: 20%;
+    top: 15%;
+    width: 150px;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-name: mover;
+}
+@keyframes mover {
+    0%{
+        width: 150px;
+        left: 20%;
+        top: 15%;
+    }
+    // 50%{
+    //     left: 22.5%;
+    //     top: 15%;
+    //     width: 160px;
+    // }
+    100%{
+        width: 150px;
+        left: 25%;
+        top: 15%;
+    }
+}
+@keyframes parpadeo {
+    0%{
+        box-shadow: 0px 0px 10px $background_fondo_caja_hija,
+    }
+    25%{
+        box-shadow: 
+        0px 0px 20px $background_fondo_caja_hija,
+        0px 0px 20px $background_fondo_caja_hija;
+    }
+    50%{
+        box-shadow: 
+        0px 0px 30px $background_fondo_caja_hija,
+        0px 0px 30px $background_fondo_caja_hija,
+        0px 0px 30px $background_fondo_caja_hija;
+    }
+    75%{
+        box-shadow: 
+        0px 0px 40px $background_fondo_caja_hija,
+        0px 0px 40px $background_fondo_caja_hija,
+        0px 0px 40px $background_fondo_caja_hija,
+        0px 0px 40px $background_fondo_caja_hija;
+    }
+    100%{
+        box-shadow: 
+        0px 0px 50px $background_fondo_caja_hija,
+        0px 0px 50px $background_fondo_caja_hija,
+        0px 0px 50px $background_fondo_caja_hija,
+        0px 0px 50px $background_fondo_caja_hija,
+        0px 0px 50px $background_fondo_caja_hija;
+    }
+}
+// .child{
+//     width: 100px;
+//     height: 100px;
+//     background: $background_fondo_caja_hija;
+//     position: relative;
+//     animation-name: mover_a_la_derecha;
+//     animation-duration: 2s;
+//     animation-delay: 1s;
+//     animation-iteration-count: 3;
+//     animation-direction: alternate;
+//     animation-timing-function: ease-in-out;
+//     animation-fill-mode: forwards;
+// }
+// @keyframes mover_a_la_derecha{
+//     0%{
+//         background: $background_inicio;
+//         left: 0%;
+//         transform: rotate(-45deg);
+//     }
+//     50%{
+//         background: $background_mitad;
+//     }
+//     100%{
+//         left:90%;
+//         background: $background_fin;
+//         transform: rotate(360deg);
+//     }
+// }
