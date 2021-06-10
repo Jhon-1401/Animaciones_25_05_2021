@@ -10,6 +10,12 @@
     background: $background_fondo_caja_padre;
     padding: 10px;
 }
+.container2{
+    width: 100%;
+    height: 300px;
+    background: $background_fondo_caja_padre2;
+    padding: 10px;
+}
 .child{
     width: 100px;
     height: 100px;
@@ -34,6 +40,68 @@
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-name: mover;
+}
+.arbol{
+    position: relative;
+    left: 0%;
+    top: -50%;
+    width: 300px;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    
+}
+.persona{
+    position: relative;
+    top: -80%;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: initial;
+    animation-name: caminar;
+
+}
+.paloma{
+    position: absolute;
+    width: 80px;
+    top: 30%;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: initial;
+    animation-name: volar;
+}
+@keyframes volar{
+    0%{
+        right: 0%;
+        top: 30%;
+    }
+    // 50%{
+    //     left: 22.5%;
+    //     top: 15%;
+    //     width: 160px;
+    // }
+    100%{
+        right: 100%;
+        top: 30%;
+    }
+}
+@keyframes caminar{
+    0%{
+        left: 0%;
+        top: -80%;
+    }
+    // 50%{
+    //     left: 22.5%;
+    //     top: 15%;
+    //     width: 160px;
+    // }
+    100%{
+        left: 100%;
+        top: -80%;
+    }
+
 }
 @keyframes mover {
     0%{
